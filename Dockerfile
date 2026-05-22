@@ -1,14 +1,14 @@
 FROM node:22-bookworm-slim
 
-ARG IGIR_VERSION=4.3.2
+ARG IGIR_VERSION=5.0.2
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION=${IGIR_VERSION}
 
 LABEL org.opencontainers.image.title="Igir" \
       org.opencontainers.image.description="Containerized Igir CLI for ROM verification, sorting, and maintenance" \
-      org.opencontainers.image.url="https://github.com/dewab/docker-igir" \
-      org.opencontainers.image.source="https://github.com/dewab/docker-igir" \
+      org.opencontainers.image.url="https://github.com/dewab-org/docker-igir" \
+      org.opencontainers.image.source="https://github.com/dewab-org/docker-igir" \
       org.opencontainers.image.vendor="Daniel" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.version="${VERSION}" \

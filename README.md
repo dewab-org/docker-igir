@@ -1,6 +1,6 @@
 # Igir Container
 
-This project builds a minimal runtime image for the `igir` CLI and publishes it from [dewab/docker-igir](https://github.com/dewab/docker-igir) to `ghcr.io`.
+This project builds a minimal runtime image for the `igir` CLI and publishes it from [dewab-org/docker-igir](https://github.com/dewab-org/docker-igir) to `ghcr.io`.
 
 ## Design
 
@@ -13,10 +13,10 @@ This project builds a minimal runtime image for the `igir` CLI and publishes it 
 
 ## Defaults
 
-- Repository: `https://github.com/dewab/docker-igir`
-- Published image: `ghcr.io/dewab/docker-igir`
-- Current Igir version: `4.3.2`
-- Primary release tag: `ghcr.io/dewab/docker-igir:4.3.2`
+- Repository: `https://github.com/dewab-org/docker-igir`
+- Published image: `ghcr.io/dewab-org/docker-igir`
+- Current Igir version: `5.0.2`
+- Primary release tag: `ghcr.io/dewab-org/docker-igir:5.0.2`
 - Default target platform: `linux/amd64`
 
 ## Build
@@ -28,7 +28,7 @@ container build \
   --platform linux/amd64 \
   --build-arg BUILD_DATE="$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
   --build-arg VCS_REF="$(git rev-parse --short HEAD 2>/dev/null || printf unknown)" \
-  -t ghcr.io/dewab/docker-igir:4.3.2 .
+  -t ghcr.io/dewab-org/docker-igir:5.0.2 .
 ```
 
 Or use the repeatable target:
@@ -37,7 +37,7 @@ Or use the repeatable target:
 make build
 ```
 
-`make build` first vendors `igir@4.3.2` for `linux/amd64` on the host, then runs an offline `container build`.
+`make build` first vendors `igir@5.0.2` for `linux/amd64` on the host, then runs an offline `container build`.
 
 If you need a host-arch-only build while debugging:
 
@@ -88,15 +88,15 @@ On `main` branch pushes and manual runs, the workflow will:
 - Build the image
 - Smoke test `--version`
 - Run Trivy filesystem and image scans
-- Push `ghcr.io/dewab/docker-igir:<IGIR_VERSION>`
-- Push `ghcr.io/dewab/docker-igir:latest` on the default branch
+- Push `ghcr.io/dewab-org/docker-igir:<IGIR_VERSION>`
+- Push `ghcr.io/dewab-org/docker-igir:latest` on the default branch
 
 ## Usage
 
 Show help:
 
 ```bash
-docker run --rm ghcr.io/dewab/docker-igir:4.3.2
+docker run --rm ghcr.io/dewab-org/docker-igir:5.0.2
 ```
 
 Mount ROMs, DATs, and output directories:
@@ -106,7 +106,7 @@ container run --rm -it \
   --volume /path/to/roms:/data/in:ro \
   --volume /path/to/dats:/data/dats:ro \
   --volume /path/to/output:/data/out \
-  ghcr.io/dewab/docker-igir:4.3.2 \
+  ghcr.io/dewab-org/docker-igir:5.0.2 \
   copy zip test \
   --dat /data/dats/*.zip \
   --input /data/in \

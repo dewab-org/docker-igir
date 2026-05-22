@@ -1,5 +1,5 @@
-IMAGE ?= ghcr.io/dewab/docker-igir
-IGIR_VERSION ?= 4.3.2
+IMAGE ?= ghcr.io/dewab-org/docker-igir
+IGIR_VERSION ?= 5.0.2
 BUILD_DATE ?= $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 VCS_REF ?= $(shell git rev-parse --short HEAD 2>/dev/null || printf unknown)
 PLATFORMS ?= linux/amd64

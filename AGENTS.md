@@ -10,7 +10,7 @@ Build and publish a robust, secure Docker image for the `igir` CLI to Docker Hub
 
 - `Dockerfile` exists and is designed as a multi-stage build.
 - Runtime image is based on `node:22-bookworm-slim`.
-- `IGIR_VERSION` is pinned to `4.3.2`.
+- `IGIR_VERSION` is pinned to `5.0.2`.
 - Runtime uses a non-root user (`node`).
 - `tini` is used as PID 1.
 - OCI image labels are included for Docker Hub / registry metadata.

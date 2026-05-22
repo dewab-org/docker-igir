@@ -13,7 +13,7 @@ permissions:
   security-events: write
 
 env:
-  IMAGE_NAME: ghcr.io/dewab/docker-igir
+  IMAGE_NAME: ghcr.io/dewab-org/docker-igir
   PLATFORM: linux/amd64
 
 jobs:
