@@ -1,5 +1,7 @@
 # Igir Container
 
+[![Build](https://github.com/dewab-org/docker-igir/actions/workflows/publish-ghcr.yml/badge.svg)](https://github.com/dewab-org/docker-igir/actions/workflows/publish-ghcr.yml)
+
 This project builds a minimal runtime image for the `igir` CLI and publishes it from [dewab-org/docker-igir](https://github.com/dewab-org/docker-igir) to `ghcr.io`.
 
 ## Design
