@@ -24,6 +24,8 @@ ENV NODE_ENV=production \
 
 COPY .vendor/igir-linux-x64/node_modules /usr/local/lib/node_modules
 
+RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
+
 RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack \
     && rm -f /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack \
     && mkdir -p /data/in /data/out /data/dats \
