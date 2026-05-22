@@ -125,9 +125,7 @@ jobs:
           test "$version" = "${{ steps.version.outputs.igir_version }}"
 
       - name: Set Up Trivy
-        uses: aquasecurity/setup-trivy@v0.2.2
-        with:
-          version: latest
+        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
       - name: Trivy Filesystem Scan
         run: |
